@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.recipe-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-section__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.recipe-section__title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 4.5em;
+    margin-bottom: 10px;
+}
+
+.recipe-section__description {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.recipe-section__link {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size:1.7em;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: black;
+    position:relative;
+    text-decoration:none;
+}
+
+.recipe-section__link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 1px;
+    background-color: black;
+}
+
+.recipe-section__main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    width: 80%;
+}
+
+.recipe__wrapper {
+    position: relative;
+}
+
+.recipe__icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.recipe__icon {
+    width: 45%;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.recipe__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe__icon:nth-child(1) img {
+    transform: scaleX(-1) translate(30px, -5px);
+}
+
+.recipe__icon:nth-child(2) img {
+    transform: rotate(110deg) translate(25px, 5px);
+}
+
+.recipe__icon:nth-child(3) img {
+    transform: translateX(-30px, 30px);
+}
+
+.recipe__image {
+    position: absolute; 
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.recipe__image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.recipe__details {
+    text-align: center;
+}
+
+.recipe__name {
+    font-family:'Barlow Condensed', sans-serif;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .recipe {
+      width:95%;
+    }
+
+    .recipe-section__main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe__details {
+        width:85%;
+        }
+
+        .recipe-section__content {
+            font-size:.6em;
+        }
+
+        .recipe-section__description {
+            font-size:2.5em;
+            padding:0 20px;
+        }
+        .recipe-section__link {
+            font-size:2.1em;
+        }
+}

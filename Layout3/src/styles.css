@@ -1,0 +1,89 @@
+body, * {
+    background-color:#F3EDE5;
+}
+
+.carousel-active {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+.carousel-wrapper {
+height:100vh;
+display:flex;
+position:relative;
+}
+
+.carousel {
+    position:absolute;
+    width: 100%;
+    height: 70vh;
+    align-self:center;
+}
+
+.carousel__slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+/* Responsive styling */
+@media (max-width: 375px) {
+    .carousel__slide {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .carousel__slide {
+        font-size: 24px;
+    }
+}
+
+.carousel__toggle-btn {
+    padding: 10px 20px;
+    background-color: grey;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.carousel__button-next,
+.carousel__button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure icons are on top */
+}
+
+.carousel__button-next img,
+.carousel__button-prev img {
+    width: 110%; /* Adjust icon size */
+    height: 110%; /* Adjust icon size */
+    background-color: transparent;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    content: "";
+}
+
+.carousel__button-next {
+    right: 10px;
+}
+
+.carousel__button-prev {
+    left: 10px;
+}

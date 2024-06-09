@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
+body {
+    font-family: 'Fira Sans';
+    margin:0;
+    padding:0;
+}
+
+.image-text-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.8s;
+    background-color: #E3CFCF;
+}
+
+.image-text-section--visible {
+    opacity: 1;
+}
+
+.image-text-section__item {
+    display: flex;
+    align-items: center; 
+    justify-content: center;  
+    width: 50%;
+    text-align: center;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.image-text-section__item-container {
+    padding:20px 90px;
+}
+
+.image-text-section__item-text {
+    margin: 0 auto;
+}
+
+.image-text-section__item-image {
+    max-width: 100%;
+    height: auto; 
+}
+
+.image-text-section__item-description1, .image-text-section__item-description2 {
+    font-weight: 300;
+    font-size: 18px;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+.image-text-section__item-description1 {
+    display: block;
+    max-height: unset;
+    opacity: 1;
+}
+
+.image-text-section__item-heading {
+    font-size: 32px;
+    font-weight: 275;
+    text-transform: uppercase;
+}
+
+.image-text-section__item-description2--visible {
+    max-height: 200px;
+    opacity: 1;
+    margin:0;
+}
+
+.image-text-section__item-btn-toggle {
+    font-weight: 500;
+    font-family: 'Fira Sans';
+    background: transparent;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 12px 34px;
+    cursor: pointer;
+    border: 1px solid;
+    opacity: 1;
+    transition: opacity 0.3s ease-out, display 0s 0.3s; 
+}
+
+.image-text-section__item-btn-toggle--hidden {
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .image-text-section {
+        flex-direction: column;
+        align-items: center;  
+    }
+
+    .image-text-section__item {
+        width: 100%;
+    }
+
+    .image-text-section__item-container {
+        padding:70px 20px;
+    }
+
+    .image-text-section__item-image {
+        width: 100%;
+    }
+
+    .image-text-section__item-heading {
+        font-size: 6vw; 
+    }
+
+    .image-text-section__item-description1, 
+    .image-text-section__item-description2 {
+        font-size: 4vw; 
+    }
+
+    .image-text-section__item-btn-toggle {
+        font-size: 4vw; 
+        padding: 8px 16px;
+    }
+}
