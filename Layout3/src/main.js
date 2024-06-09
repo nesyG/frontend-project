@@ -2,27 +2,31 @@ class CustomCarousel {
     constructor(containerSelector) {
         this.containerSelector = containerSelector;
         this.swiper = null;
+        this.nextButton = document.querySelector('.carousel__button-next');
+        this.prevButton = document.querySelector('.carousel__button-prev');
     }
 
     initialize() {
         this.swiper = new Swiper(this.containerSelector, {
-            slidesPerView: 1,
-            spaceBetween: 10,     
             navigation: {
-                nextEl: '.carousel__button-next',
-                prevEl: '.carousel__button-prev',
+                nextEl: this.nextButton,
+                prevEl: this.prevButton,
             },
+            spaceBetween: 10,
             breakpoints: {
-                768: {
-                    slidesPerView: 2,
+                375: {
+                    slidesPerView: 1.13,
                 },
-                1024: {
-                    slidesPerView: 3,
+                1440: {
+                    slidesPerView: 3.1,
                 }
             }
         });
 
+        this.updateNavigationVisibility();
+
         this.swiper.on('slideChange', () => {
+            this.updateNavigationVisibility();
             console.log('Active slide:', this.swiper.activeIndex);
         });
     }
@@ -31,6 +35,8 @@ class CustomCarousel {
         if (this.swiper) {
             this.swiper.destroy(true, true);
             this.swiper = null;
+            this.nextButton.style.display = 'none';
+            this.prevButton.style.display = 'none';
         }
     }
 
@@ -41,6 +47,20 @@ class CustomCarousel {
         } else {
             this.initialize();
             document.body.classList.add('carousel-active');
+        }
+    }
+
+    updateNavigationVisibility() {
+        if (this.swiper.isBeginning) {
+            this.prevButton.style.display = 'none';
+        } else {
+            this.prevButton.style.display = 'block';
+        }
+
+        if (this.swiper.isEnd) {
+            this.nextButton.style.display = 'none';
+        } else {
+            this.nextButton.style.display = 'block';
         }
     }
 }

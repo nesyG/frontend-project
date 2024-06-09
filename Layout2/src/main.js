@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            name: "MANGOSPARKLING TRIPLE CITRUS & MINT MOCKTAIL BULLET",
+            name: "SPARKLING TRIPLE CITRUS & MINT MOCKTAIL BULLET",
             image: "../public/images/image2.jpg",
             icons: [
                 "../public/images/lemon-icon.png",
@@ -41,6 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const wrapperDiv = document.createElement('div');
         wrapperDiv.classList.add('recipe__wrapper');
 
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add('recipe__content');
+
+        const imageDiv = document.createElement('div');
+        imageDiv.classList.add('recipe__image');
+
+        const recipeImg = document.createElement('img');
+        recipeImg.src = recipe.image;
+        recipeImg.alt = recipe.name;
+
+        imageDiv.appendChild(recipeImg);
+        contentDiv.appendChild(imageDiv);
+
         const iconsDiv = document.createElement('div');
         iconsDiv.classList.add('recipe__icons');
 
@@ -62,14 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
             iconsDiv.appendChild(iconDiv);
         });
 
-        const imageDiv = document.createElement('div');
-        imageDiv.classList.add('recipe__image');
-
-        const recipeImg = document.createElement('img');
-        recipeImg.src = recipe.image;
-        recipeImg.alt = recipe.name;
-
-        imageDiv.appendChild(recipeImg);
+        contentDiv.appendChild(iconsDiv);
+        wrapperDiv.appendChild(contentDiv);
+        recipeDiv.appendChild(wrapperDiv);
 
         const detailsDiv = document.createElement('div');
         detailsDiv.classList.add('recipe__details');
@@ -79,14 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
         name.textContent = recipe.name;
 
         detailsDiv.appendChild(name);
-
-        wrapperDiv.appendChild(iconsDiv);
-        wrapperDiv.appendChild(imageDiv);
-        recipeDiv.appendChild(wrapperDiv);
         recipeDiv.appendChild(detailsDiv);
 
         recipeContainer.appendChild(recipeDiv);
     });
 });
-
-

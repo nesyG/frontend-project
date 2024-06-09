@@ -1,5 +1,5 @@
 {
-  "name": "Image Text Section",
+  "name": "Main Section",
   "settings": [
     {
       "type": "image_picker",
@@ -34,7 +34,7 @@
   ],
   "presets": [
     {
-      "name": "Image Text Section",
+      "name": "Main Section",
       "category": "Custom"
     }
   ]
