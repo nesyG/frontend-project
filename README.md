@@ -1,6 +1,6 @@
-# Simple Layouts with HTML, CSS, JS, and Swiper.js Controls
+# Layouts with HTML, CSS, JS, and Swiper.js Controls
 
-This repository contains simple layouts built using HTML, CSS, JavaScript, and Swiper.js controls. Each layout showcases different design elements and features implemented using these technologies. Each layout is deployed using Vercel.
+This repository contains simple layouts and shopify schema built using HTML, CSS, JavaScript, and Swiper.js controls. Each layout showcases different design elements and features implemented using these technologies. Layouts are deployed using Vercel.
 
 ## Layouts
 
