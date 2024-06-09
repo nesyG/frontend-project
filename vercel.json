@@ -1,5 +1,4 @@
 {
-    "projects": {
       "Layout1": {
         "source": "Layout1",
         "destination": "/Layout1/src"
@@ -11,6 +10,5 @@
       "Layout3": {
         "source": "Layout3",
         "destination": "/Layout3/src"
-      }
-    }
+      } 
   }
