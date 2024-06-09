@@ -1,0 +1,16 @@
+{
+    "projects": {
+      "Layout1": {
+        "source": "Layout1",
+        "destination": "/Layout1/src"
+      },
+      "Layout2": {
+        "source": "Layout2",
+        "destination": "/Layout2/src"
+      },
+      "Layout3": {
+        "source": "Layout3",
+        "destination": "/Layout3/src"
+      }
+    }
+  }
