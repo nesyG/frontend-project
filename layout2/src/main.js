@@ -2,32 +2,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const recipes = [
         {
             name: "SPARKLING TRIPLE CITRUS & MINT MOCKTAIL",
-            image: "../public/images/image1.jpg",
+            image: "./images/image1.jpg",
             icons: [
-                "../public/images/lemon-icon.png",
-                "../public/images/orange-icon.png",
-                "../public/images/leaf-icon.png",
-                "../public/images/berry-icon.png"
+                "./images/lemon-icon.png",
+                "./images/orange-icon.png",
+                "./images/leaf-icon.png",
+                "./images/berry-icon.png"
             ]
         },
         {
             name: "SPARKLING TRIPLE CITRUS & MINT MOCKTAIL BULLET",
-            image: "../public/images/image2.jpg",
+            image: "./images/image2.jpg",
             icons: [
-                "../public/images/lemon-icon.png",
-                "../public/images/orange-icon.png",
-                "../public/images/leaf-icon.png",
-                "../public/images/berry-icon.png"
+                "./images/lemon-icon.png",
+                "./images/orange-icon.png",
+                "./images/leaf-icon.png",
+                "./images/berry-icon.png"
             ]
         },
         {
             name: "SPARKLING TRIPLE CITRUS & MINT MOCKTAIL",
-            image: "../public/images/image3.jpg",
+            image: "./images/image3.jpg",
             icons: [
-                "../public/images/lemon-icon.png",
-                "../public/images/orange-icon.png",
-                "../public/images/leaf-icon.png",
-                "../public/images/berry-icon.png"
+                "./images/lemon-icon.png",
+                "./images/orange-icon.png",
+                "./images/leaf-icon.png",
+                "./images/berry-icon.png"
             ]
         },
     ];
